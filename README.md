@@ -1,6 +1,8 @@
 <h1 align="center">Hi 👋, I'm Chris</h1>
 <h3 align="center">Developer passionate about making products to help others</h3>
 
+<img src="nagare/nagare.svg" width="100%" alt="nagare" />
+
 - 👨‍💻 All of my projects are available at [chrisjhchung.com](http://www.chrisjhchung.com)
 
 - 📫 How to reach me **chrisjhchung@gmail.com**

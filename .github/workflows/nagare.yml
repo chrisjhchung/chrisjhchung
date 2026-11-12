@@ -1,0 +1,21 @@
+name: nagare
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: monex00/nagare@ee1fcb79832a256837baf2aea672396447a41041
+        with:
+          token: ${{ secrets.NAGARE_TOKEN || github.token }}
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nagare/nagare.svg
+          git diff --cached --quiet || git commit -m "Redraw nagare"
+          git push
